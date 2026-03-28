@@ -1,0 +1,157 @@
+.bg {
+    background-color: #1d2525;
+    height: 100%;
+}
+
+.svg {
+    width: 70%;
+    height: 70%;
+}
+
+.contact {
+    padding: 20px 20px;
+    font-size: 24px;
+    font-family: 'SelfModern', sans-serif;
+    color: white;
+    padding-bottom: 0;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    width: 50px;
+    gap: 10px;
+    align-items: center;
+}
+
+.useful {
+    padding: 40px 0;
+    padding-bottom: 0;
+    font-size: 23px;
+    color: rgb(176, 175, 175);
+}
+
+.useful ul {
+    font-size: 16px;
+    cursor: pointer;
+    line-height: 2.3rem;
+}
+
+.useful ul:hover {
+    color: white;
+}
+
+.useful h1 {
+    color: white;
+}
+
+.links {
+    display: flex;
+    gap: 220px;
+    flex-direction: row;
+}
+
+.find {
+    padding-bottom: 0;
+    text-align: center;
+    padding: 40px 0;
+    font-size: 23px;
+    color: white;
+    line-height: 2.3rem;
+}
+
+.find ul {
+    font-size: 16px;
+    cursor: pointer;
+    color: rgb(176, 175, 175);
+    line-height: 2.3rem;
+}
+
+.find ul:hover {
+    color: white;
+}
+
+.Contact {
+    padding-bottom: 0;
+    text-align: center;
+    padding: 40px 0;
+    font-size: 23px;
+    color: white;
+    line-height: 2.3rem;
+}
+
+.Contact ul {
+    font-size: 16px;
+    cursor: pointer;
+    color: rgb(176, 175, 175);
+    line-height: 2.3rem;
+}
+
+.Contact ul:hover {
+    color: white;
+}
+
+.copywrite {
+    color: whitesmoke;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .bg {
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    .svg {
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .icons {
+        width: 25%;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .contact {
+        font-size: 18px;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .links {
+        flex-direction: column;
+        gap: 20px;
+        align-items: left;
+    }
+
+    .useful, .find, .Contact {
+        font-size: 16px;
+        padding: 10px 0;
+        text-align: left;
+    }
+
+    .useful ul, .find ul, .Contact ul {
+        font-size: 14px;
+        line-height: 1.8rem;
+    }
+}
+
+@media (max-width: 868px) {
+    .icons {
+        width: 80px;
+        gap: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .icons {
+        width: 70px;
+        padding-right: 20px;
+    }
+}

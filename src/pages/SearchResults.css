@@ -1,0 +1,148 @@
+.search-results-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.search-results-header {
+    margin-top: 70px;
+}
+
+.search-results-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.search-results-input:focus {
+    border-color: gray;
+    outline: none;
+}
+
+.search-results-loading {
+    font-size: 16px;
+    color: #888;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.search-results-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 20px;
+}
+
+.search-results-product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.search-results-product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.search-results-product-image-wrapper {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.search-results-product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.search-results-product-image:hover {
+    transform: scale(1.05);
+}
+
+.search-results-product-hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.search-results-product-image-wrapper:hover .search-results-product-hover-image {
+    opacity: 1;
+}
+
+.search-results-product-name {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Product price */
+.search-results-product-price {
+    font-size: 16px;
+    color: #000;
+    font-weight: bolder;
+}
+
+/* No results found text */
+.search-results-no-results {
+    font-size: 18px;
+    color: #888;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Media Queries for Mobile Responsiveness */
+
+/* For tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Grid layout for smaller screens (2 columns) */
+    .search-results-grid {
+        grid-template-columns: repeat(3, 1fr); /* 2 columns for tablets and small screens */
+    }
+
+    /* Product card adjustments for small screens */
+    .search-results-product-name {
+        font-size: 16px; /* Slightly smaller text */
+    }
+
+    .search-results-product-price {
+        font-size: 14px; /* Slightly smaller price text */
+    }
+}
+
+/* For mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+    /* Grid layout for mobile screens (4 items per row) */
+    .search-results-grid {
+        grid-template-columns: repeat(2, 1fr); /* 4 items per row for mobile */
+    }
+
+    /* Adjusting padding and font sizes for mobile screens */
+    .search-results-container {
+        padding: 10px; /* Reduced padding */
+    }
+
+    .search-results-product-name {
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .search-results-product-price {
+        font-size: 12px; /* Smaller price text */
+    }
+}

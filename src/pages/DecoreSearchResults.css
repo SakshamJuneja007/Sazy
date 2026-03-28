@@ -1,0 +1,146 @@
+/* Container styles */
+.decore-results-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Grid layout */
+.decore-results-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Default to 3 columns */
+    gap: 1.5rem; /* Equivalent to gap-6 */
+    margin-top: 20px;
+}
+
+/* Product card styles */
+.decore-product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.decore-product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Image wrapper and hover effect */
+.decore-product-image-wrapper {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.decore-product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.decore-product-card:hover .decore-product-image {
+    transform: scale(1.05);
+}
+
+/* Product name and price */
+.decore-product-name {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.decore-product-price {
+    font-size: 16px;
+    color: #000;
+    font-weight: bolder;
+}
+
+/* No results message */
+.decore-no-results {
+    font-size: 18px;
+    color: #888;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Hover image styles */
+/* Image wrapper and hover effect */
+.decore-product-image-wrapper {
+    position: relative;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 0; /* Set height to 0 initially */
+    padding-bottom: 100%; /* This creates a square aspect ratio (adjust if necessary) */
+    overflow: hidden; /* Ensure no extra content is visible outside the wrapper */
+}
+
+/* Primary image styles */
+.decore-product-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover; /* Ensure the image fully covers the area without stretching */
+    transition: transform 0.3s;
+}
+
+/* Hover image styles */
+.decore-product-hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure hover image fully covers the area */
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Show the hover image on hover */
+.decore-product-image-wrapper:hover .decore-product-hover-image {
+    opacity: 1;
+}
+
+/* Media Queries for Mobile Responsiveness */
+
+/* For tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Grid layout for smaller screens (2 columns) */
+    .decore-results-grid {
+        grid-template-columns: repeat(3, 1fr); /* 2 columns for tablets and small screens */
+    }
+
+    /* Product card adjustments for small screens */
+    .decore-product-name {
+        font-size: 16px; /* Slightly smaller text */
+    }
+
+    .decore-product-price {
+        font-size: 14px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .decore-results-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    .decore-results-container {
+        padding: 10px;
+    }
+
+    .decore-product-name {
+        font-size: 14px;
+    }
+
+    .decore-product-price {
+        font-size: 12px; 
+    }
+}

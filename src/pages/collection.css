@@ -1,0 +1,63 @@
+/* General reset for box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.collection-container {
+  
+  display: flex;
+  font-family: outfit;
+  margin-bottom: 138px;
+  flex-direction: column;
+  gap: 0.25rem; /* Equivalent to gap-1 */
+  padding-top: 2.5rem; /* Equivalent to pt-10 */
+  border-top: 1px solid #e5e7eb; /* Light gray border for border-t */
+  overflow-x: hidden; /* Prevents any horizontal overflow */
+}
+
+@media (min-width: 640px) {
+  .collection-container {
+    flex-direction: row; /* Equivalent to sm:flex-row */
+    gap: 2.5rem; /* Equivalent to sm:gap-10 */
+  }
+  
+}
+
+.min-width-60 {
+  min-width: 15rem; 
+}
+
+.filter-text {
+  margin: 0.5rem 0; /* Equivalent to my-2 */
+  font-size: 1.25rem; /* Equivalent to text-xl */
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 102px;
+  gap: 0.5rem; /* Equivalent to gap-2 */
+}
+
+.h1 {
+  font-weight: bold;
+}
+
+@media (min-width: 318px) {
+  .filter-text {
+    margin-bottom: 30px;
+    margin-left: 20px;
+  }
+
+  .border {
+    translate: 20px;
+    width: 90%; 
+  }
+
+  .heading1 {
+    margin-top: 70px;
+    font-size: 1.5rem;
+    translate: 70px;
+  }
+}

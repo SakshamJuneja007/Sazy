@@ -1,0 +1,130 @@
+/* Positioning and layout for the container */
+.search-bar-container {
+    translate: 250px 100px;
+    z-index: 50;
+    background-color: #f7f7f7;
+    padding: 12px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+/* Styling for the search bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #d1d5db;
+    padding: 8px 12px;
+    border-radius: 50px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Input field styling */
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: inherit;
+    font-size: 14px;
+    color: #4b5563;
+    padding: 0 8px;
+}
+
+/* Search icon styling */
+.search-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    filter: grayscale(50%);
+    transition: filter 0.3s;
+}
+
+.search-icon:hover {
+    filter: grayscale(0%);
+}
+
+/* Cross icon (close button) styling */
+.close-icon {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.close-icon:hover {
+    transform: rotate(90deg);
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+    .search-bar-container {
+        translate: 50px 50px; /* Adjust for smaller screens */
+        padding: 10px 15px;
+        width: 90%; /* Make the container width smaller */
+        max-width: 100%; /* Ensure it doesn't exceed the screen width */
+    }
+
+    .search-bar {
+        padding: 8px 10px; /* Less padding for mobile */
+        max-width: 100%; /* Full width on mobile */
+    }
+
+    .search-input {
+        font-size: 12px; /* Smaller font size for input */
+        padding: 0 6px;
+    }
+
+    .search-icon {
+        width: 18px; /* Smaller icon size */
+        height: 18px;
+    }
+
+    .close-icon {
+        top: 20px; /* Adjust the position for mobile */
+        right: 15px;
+        width: 14px;
+        height: 14px;
+    }
+}
+
+/* Styles for very small screens (portrait mode phones) */
+@media screen and (max-width: 480px) {
+    .search-bar-container {
+        translate: 25px 100px; /* Center the container on very small screens */
+        padding: 8px 10px;
+    }
+
+    .search-bar {
+        padding: 6px 8px;
+        width: 85%; /* Adjust padding for very small screens */
+    }
+
+    .search-input {
+        font-size: 10px; /* Even smaller font size */
+        padding: 0 4px;
+    }
+
+    .search-icon {
+        width: 16px; /* Smaller icon size */
+        height: 16px;
+    }
+
+    .close-icon {
+        top: 15px; /* Further adjust the position for very small screens */
+        right: 10px;
+        width: 12px;
+        height: 12px;
+    }
+}

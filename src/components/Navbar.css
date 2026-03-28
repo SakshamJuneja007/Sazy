@@ -1,0 +1,259 @@
+/* Reset and standard styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav {
+  box-shadow: 0px 4px 6px rgba(100, 100, 100, 0.7);
+  z-index: 100;
+  background-color: white;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: medium;
+}
+
+.logo {
+  width: 184px;
+}
+
+.nav-element {
+  display: none;
+}
+
+.navlinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+}
+
+.navlinks:link,
+.navlinks:visited {
+  text-decoration: none;
+  color: black;
+}
+
+/* Active link style */
+.navlinks.active {
+  color: #374151;
+  font-weight: 700;
+  font-family: outfit;
+  line-height: 20px;
+  font-size: 15px;
+}
+
+.navlinks p {
+  margin: 0;
+}
+a.active hr{
+  display: block;
+}
+.hr {
+  display: none;
+  width: 50%;
+  border: none;
+  height: 1.5px;
+  background-color: black;
+}
+
+/* Media Queries */
+@media (max-width: 380px) {
+  .logo {
+    margin-left: 10px;
+    width: 120px;
+  }
+}
+
+@media (min-width: 640px) {
+  .nav {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .nav-element {
+    display: flex;
+    gap: 40px;
+    font-size: medium;
+    color: black;
+  }
+
+  .mobile-menu {
+    display: none; /* Hide the mobile menu icon on larger screens */
+  }
+
+  .navlinks {
+    color: black;
+  }
+}
+
+/* Mobile Menu */
+@media (max-width: 639px) {
+  .mobile-menu {
+    margin-right: 10px;
+    display: block;
+    width: 20px;
+    cursor: pointer;
+  }
+
+  .profile-img,
+  .cart-img {
+    width: 35px; /* Adjust size for mobile */
+    height: 35px;
+  }
+}
+
+/* Profile Dropdown Styles */
+.group {
+  position: relative;
+}
+
+/* Dropdown styling */
+.dropdown {
+  display: block; /* Make it visible when isDropdownOpen is true */
+  position: absolute;
+  right: 0;
+  top: 100%; /* Position dropdown below the profile icon */
+  margin-top: 10px;
+  width: 180px; /* Set dropdown width */
+  background-color: #f9fafb;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Dropdown item styling */
+.dropdown-item {
+  padding: 12px 16px; /* Increased padding for larger items */
+  color: #4b5563;
+  cursor: pointer;
+  font-size: 16px; /* Increased font size for better readability */
+}
+
+.dropdown-item:hover {
+  background-color: #e5e7eb;
+  color: black;
+}
+
+.order {
+  position: absolute;
+  top: 45px;
+  height: 15px;
+  width: 15px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-size: 12px;
+  border: 1px black;
+  border-radius: 50%;
+}
+
+/* Ensure images do not disappear */
+.profile-img,
+.cart-img {
+  display: block; /* Make sure these images are always displayed */
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Black background with opacity */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensures it's above other content */
+}
+
+/* Menu List inside the overlay */
+.mobile-menu-list {
+  background-color: #fff;
+  border-radius: 10px;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Mobile Navigation Link */
+.mobile-navlink {
+  font-size: 24px;
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  padding: 15px;
+  width: 100%;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.mobile-navlink:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+/* Profile Dropdown */
+.dropdown {
+  position: absolute;
+  top: 30px; /* Adjust the dropdown position */
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.dropdown-item {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* The mobile menu overlay */
+
+/* Close button in the top-right corner */
+.close-btn {
+  position: absolute;
+  top: 90px;
+  right: 50px;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: black;
+  cursor: pointer;
+}
+
+/* Style for the mobile menu list */
+
+/* Style for the mobile navigation links */
+.mobile-navlink {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.mobile-navlink:hover {
+  color: #333;
+}

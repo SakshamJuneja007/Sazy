@@ -1,0 +1,29 @@
+.product-container {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto; /* Center content */
+    padding: 20px; /* Add some padding */
+    gap: 40px; /* Adjust this value to control the gap */
+}
+
+.product-image {
+    flex: 1;
+    max-width: 50%; /* Adjust width as needed */
+}
+
+.product-description {
+    flex: 2;
+    max-width: 50%; /* Adjust width as needed */
+}
+
+@media (max-width: 768px) {
+    .product-container {
+        flex-direction: column; /* Stack on smaller screens */
+        gap: 20px; /* Reduce gap for mobile view */
+    }
+
+    .product-image,
+    .product-description {
+        max-width: 100%;
+    }
+}
