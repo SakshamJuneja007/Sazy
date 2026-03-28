@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom'; 
 import { useCart } from "../context/CartContext"; 
 import { ShopContext } from '../context/ShopContext'; 
-import './cartpage.css';
+import './cartPage.css';
 
 const Cart = () => {
   const { currency, products } = useContext(ShopContext); 
