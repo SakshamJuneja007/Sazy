@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'; // Import useState and useContext
 import { Link } from 'react-router-dom'; // Import Link for navigation
 import { ShopContext } from '../context/ShopContext'; // Ensure the correct path to ShopContext
-import './Collection.css'; // Import the CSS file
+import './collection.css'; // Import the CSS file
 import { assets } from '../assets/assets'; // Import assets for icons
 import Tittle from '../components/Tittle'; // Import custom Title component
 
